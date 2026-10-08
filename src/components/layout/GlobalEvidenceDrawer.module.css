@@ -1,0 +1,133 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.2);
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 400px;
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-drawer);
+  z-index: 210;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.header {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.closeBtn {
+  color: var(--color-text-secondary);
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+.closeBtn:hover {
+  background-color: var(--color-bg-surface-hover);
+}
+
+.content {
+  padding: var(--space-6);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.typeBadge {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.fact { background-color: #D1FAE5; color: var(--color-fact); }
+.signal { background-color: #DBEAFE; color: var(--color-signal); }
+.inference { background-color: #EDE9FE; color: var(--color-inference); }
+.hypothesis { background-color: #FEF3C7; color: var(--color-hypothesis); }
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sourceBox {
+  background-color: var(--color-bg-primary);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.extractBox {
+  background-color: var(--color-bg-primary);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  border-left: 3px solid var(--color-border-focus);
+  font-style: italic;
+}
+
+.confidenceBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.confidenceBar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.confidenceFill {
+  height: 100%;
+  background-color: var(--color-success);
+}

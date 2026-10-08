@@ -1,0 +1,94 @@
+.topbar {
+  height: var(--topbar-height);
+  background-color: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-4);
+  width: 400px;
+  height: 40px;
+}
+
+.searchIcon {
+  color: var(--color-text-secondary);
+  margin-right: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background-color: var(--color-brand-primary);
+  color: #fff;
+  height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.createBtn:hover {
+  background-color: var(--color-brand-primary-hover);
+}
+
+.iconBtn {
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.iconBtn:hover {
+  background-color: var(--color-bg-surface-hover);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-border-focus);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
